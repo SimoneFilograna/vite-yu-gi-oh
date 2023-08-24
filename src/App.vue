@@ -21,11 +21,8 @@
 
     <div class="container">
 
-      <div class="select-container">select bar</div>
-
       <CardList></CardList>
       
-
     </div>
 
   </main>
