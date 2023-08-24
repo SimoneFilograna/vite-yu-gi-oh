@@ -1,14 +1,18 @@
 <script>
     export default{
-        props:{
-        cardObj: {
-            type: Object, 
-            required: true,         
-        }
-    },
-}
+    }
 </script>
 
-<template></template>
+<template>
+    <div class="select-container">
+        <select class="form-select" >
+            <option selected>Archetype Select</option>
+        </select>
+    </div>
+</template>
 
-<style></style>
+<style lang="scss" scoped>
+    .form-select{
+        width: 20%;
+    }
+</style>
