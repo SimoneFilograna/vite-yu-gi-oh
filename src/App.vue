@@ -39,7 +39,6 @@
 
   main{
     background-color: variables.$primary-color;
-    height: 700px;
     padding-top: 3rem;
   }
 </style>

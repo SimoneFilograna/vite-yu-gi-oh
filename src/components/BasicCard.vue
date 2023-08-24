@@ -1,18 +1,25 @@
 <script>
-export default{
+export default{     
+    props:{
+        cardObj: {
+            type: Object, 
+            required: true,         
+        }
+    },
 
 }
 </script>
 
 <template>
-    <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">tipo</p>
+    <div class="card h-100">
+        <img :src="cardObj.card_images[0].image_url_small" class="card-img-top" alt="">
+        <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">{{cardObj.name}}</h5>
+            <p class="card-text mt-auto">{{cardObj.archetype}}</p>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+
 </style>

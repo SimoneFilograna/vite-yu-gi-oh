@@ -1,7 +1,11 @@
 <script>
+    import BasicCard from "../components/BasicCard.vue";
     import { store, fillCard } from "../store";
 
     export default{
+        components: {
+            BasicCard,
+        },
         data(){
             return {
                 store
@@ -15,8 +19,10 @@
 
 <template>
     <div class="card-container">
-        <div class="row row-cols-5">
-            <div class="col"></div>
+        <div class="row row-cols-5 g-4">
+            <div class="col" v-for="singleCard in store.cardArray">
+                <BasicCard :cardObj="singleCard"></BasicCard>
+            </div>
         </div>
     </div>
 </template>
