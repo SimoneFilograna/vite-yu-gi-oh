@@ -16,12 +16,7 @@
         },
 
         methods:{
-            // selectReader(){
-            //     console.log(this.selection)
-            //     this.$emit("newArch", this.selection)
-            // },
             filteredCard
-
         },
 
         mounted(){
@@ -33,7 +28,7 @@
 <template>
     <div class="select-container">
         <select class="form-select" v-model="selection" @change="filteredCard(selection)">
-            <option value="" disabled selected hidden> Select Archetype </option>
+            <option value="" disabled selected> Select Archetype </option>
             <option v-for="singleArch in archObj">{{singleArch.archetype_name}}</option>
         </select>
     </div>
