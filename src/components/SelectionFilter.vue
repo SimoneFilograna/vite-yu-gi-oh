@@ -18,7 +18,8 @@
 <template>
     <div class="select-container">
         <select class="form-select">
-            <option selected v-for="singleArch in archObj">{{singleArch.archetype_name}}</option>
+            <option value="" disabled selected hidden>Select Archetype</option>
+            <option v-for="singleArch in archObj">{{singleArch.archetype_name}}</option>
         </select>
     </div>
 </template>
