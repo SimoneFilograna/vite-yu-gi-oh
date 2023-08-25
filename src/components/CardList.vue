@@ -1,7 +1,7 @@
 <script>
     import SelectionFilter from "../components/selectionFilter.vue"
     import BasicCard from "../components/BasicCard.vue";
-    import { store, fillCard } from "../store";
+    import { store, fillCard, filteredCard } from "../store";
 
     export default{
         components: {
@@ -14,14 +14,14 @@
             }
         },
         mounted(){
-            fillCard()
+            filteredCard()
         }
     }
 </script>
 
 <template>
 
-    <SelectionFilter :archObj="store.archArray" class="pb-3"></SelectionFilter>
+    <SelectionFilter :archObj="store.archArray" class="pb-3" ></SelectionFilter>
 
     <div class="card-container">
         <div class="card-finded">

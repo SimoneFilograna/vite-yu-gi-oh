@@ -3,20 +3,37 @@ import axios from "axios";
 
 export const store = reactive({ 
     cardArray:[],
-    archArray:[]
+    archArray:[],
+    selection: "",
 })
 
 
 export function fillCard(){
-    axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=15&offset=0").then((response)=>{
+    const url = "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=15&offset=0";
+    axios.get(url).then((response)=>{
         store.cardArray = response.data.data
         console.log("funziono")
     })
 }
 
 export function fillArch(){
-    axios.get("https://db.ygoprodeck.com/api/v7/archetypes.php").then((response)=>{
+    const url = "https://db.ygoprodeck.com/api/v7/archetypes.php"
+    axios.get(url).then((response)=>{
         store.archArray = response.data;
         console.log("funziono arch")
     })
 }
+
+export function filteredCard(selection){
+    if( selection === "" || selection === undefined){
+        console.log(selection)
+        fillCard()
+    } else {
+        console.log(selection)
+        const url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${selection}&num=15&offset=0`
+        axios.get(url).then((response)=>{
+            store.cardArray = response.data.data
+        })
+    }
+}
+

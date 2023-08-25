@@ -1,5 +1,5 @@
 <script>
-    import { fillArch } from "../store"
+    import { fillArch, filteredCard } from "../store"
 
     export default{
         props:{
@@ -11,15 +11,17 @@
 
         data(){
             return{
-                selection: null
+                selection: ""
             }
         },
 
         methods:{
-            selectReader(){
-                console.log(this.selection)
-                this.$emit("newArch", this.selection)
-            }
+            // selectReader(){
+            //     console.log(this.selection)
+            //     this.$emit("newArch", this.selection)
+            // },
+            filteredCard
+
         },
 
         mounted(){
@@ -30,7 +32,7 @@
 
 <template>
     <div class="select-container">
-        <select class="form-select" v-model="selection" @change="selectReader">
+        <select class="form-select" v-model="selection" @click="filteredCard(selection)">
             <option value="" disabled selected hidden> Select Archetype </option>
             <option v-for="singleArch in archObj">{{singleArch.archetype_name}}</option>
         </select>
