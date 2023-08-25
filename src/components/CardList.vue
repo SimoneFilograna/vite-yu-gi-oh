@@ -1,7 +1,7 @@
 <script>
     import SelectionFilter from "../components/selectionFilter.vue"
     import BasicCard from "../components/BasicCard.vue";
-    import { store, fillCard, filteredCard } from "../store";
+    import { store, filteredCard } from "../store";
 
     export default{
         components: {
