@@ -18,6 +18,7 @@
         methods:{
             selectReader(){
                 console.log(this.selection)
+                this.$emit("newArch", this.selection)
             }
         },
 
