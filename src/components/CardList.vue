@@ -21,7 +21,7 @@
 
 <template>
 
-    <SelectionFilter class="pb-3"></SelectionFilter>
+    <SelectionFilter :archObj="store.archArray" class="pb-3"></SelectionFilter>
 
     <div class="card-container">
         <div class="card-finded">
