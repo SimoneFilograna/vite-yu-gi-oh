@@ -9,6 +9,18 @@
             }
         },
 
+        data(){
+            return{
+                selection: null
+            }
+        },
+
+        methods:{
+            selectReader(){
+                console.log(this.selection)
+            }
+        },
+
         mounted(){
             fillArch()
         }
@@ -17,8 +29,8 @@
 
 <template>
     <div class="select-container">
-        <select class="form-select">
-            <option value="" disabled selected hidden>Select Archetype</option>
+        <select class="form-select" v-model="selection" @change="selectReader">
+            <option value="" disabled selected hidden> Select Archetype </option>
             <option v-for="singleArch in archObj">{{singleArch.archetype_name}}</option>
         </select>
     </div>
