@@ -32,7 +32,7 @@
 
 <template>
     <div class="select-container">
-        <select class="form-select" v-model="selection" @click="filteredCard(selection)">
+        <select class="form-select" v-model="selection" @change="filteredCard(selection)">
             <option value="" disabled selected hidden> Select Archetype </option>
             <option v-for="singleArch in archObj">{{singleArch.archetype_name}}</option>
         </select>
