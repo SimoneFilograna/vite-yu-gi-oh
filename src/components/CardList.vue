@@ -25,7 +25,7 @@
 
     <div class="card-container">
         <div class="card-finded">
-            <p class="number-finded">Founded Card</p>
+            <p class="number-finded fw-4" > Card founded {{ store.cardArray.length}}</p>
         </div>
 
         <div class="row row-cols-5 g-4">

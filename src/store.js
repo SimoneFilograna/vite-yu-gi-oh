@@ -17,7 +17,7 @@ export function fillCard(){
 }
 
 export function fillArch(){
-    const url = "https://db.ygoprodeck.com/api/v7/archetypes.php"
+    let url = "https://db.ygoprodeck.com/api/v7/archetypes.php"
     axios.get(url).then((response)=>{
         store.archArray = response.data;
         console.log("funziono arch")
@@ -30,7 +30,7 @@ export function filteredCard(selection){
         fillCard()
     } else {
         console.log(selection)
-        const url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${selection}&num=15&offset=0`
+        let url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${selection}`
         axios.get(url).then((response)=>{
             store.cardArray = response.data.data
         })
