@@ -1,5 +1,5 @@
 <script>
-    import SelectionFilter from "../components/selectionFilter.vue"
+    import SelectionFilter from "../components/SelectionFilter.vue";
     import BasicCard from "../components/BasicCard.vue";
     import { store, filteredCard } from "../store";
 
