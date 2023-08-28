@@ -24,8 +24,8 @@
     <SelectionFilter :archObj="store.archArray" class="pb-3" ></SelectionFilter>
 
     <div class="card-container">
-        <div class="card-finded">
-            <p class="number-finded fw-4" > Card founded {{ store.cardArray.length}}</p>
+        <div class="card-finded" v-show="store.selection">
+            <p class="number-finded fw-4"> Card founded {{ store.cardArray.length}}</p>
         </div>
 
         <div class="row row-cols-5 g-4">

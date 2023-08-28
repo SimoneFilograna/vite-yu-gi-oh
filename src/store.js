@@ -30,6 +30,7 @@ export function filteredCard(selection){
         fillCard()
     } else {
         console.log(selection)
+        store.selection = selection;
         let url = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${selection}`
         axios.get(url).then((response)=>{
             store.cardArray = response.data.data
