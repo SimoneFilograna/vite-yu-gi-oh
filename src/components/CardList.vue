@@ -25,7 +25,7 @@
 
     <div class="card-container">
         <div class="card-finded" v-show="store.selection">
-            <p class="number-finded fw-4"> Card founded {{ store.cardArray.length}}</p>
+            <p class="number-finded fw-4"> Card found {{ store.cardArray.length}}</p>
         </div>
 
         <div class="row row-cols-5 g-4">
